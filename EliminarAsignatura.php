@@ -150,7 +150,7 @@
                 }, (data, status) => {
                     if (data === "ss") {
                         $('#infosE').hide();
-                        location = 'index.php?action=e';
+                        location = 'home.php?action=e';
 
 
 

@@ -103,7 +103,7 @@ switch($_POST['action']){
 //        print_r($_POST);
         CrearAsignaturaQuery();
 //        CargarPensum();
-      header("location: ../index.php?action=ok");
+      header("location: ../home.php?action=ok");
         break;
     
     case "ProfList":
@@ -257,7 +257,7 @@ switch($_POST['action']){
 
         $ConsultaEA = $_POST['InputEditAsig'];
 //        echo $ConsultaEA;
-        header('location: ../index.php?action=*-*');
+        header('location: ../home.php?action=*-*');
         //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
         UpdateAsignatura($ConsultaEA);
         
@@ -279,7 +279,7 @@ switch($_POST['action']){
         
         ActualizarHorario();
         //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
-//        header('location: ../index.php?action=UH');
+//        header('location: ../home.php?action=UH');
         
         break;
     
@@ -288,7 +288,7 @@ switch($_POST['action']){
 
         $ConsultaEA = $_POST['InputEditAsig'];
 //        echo $ConsultaEA;
-//        header('location: ../index.php?action=*-*');
+//        header('location: ../home.php?action=*-*');
         //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
         UpdateEstatus($ConsultaEA);
         
@@ -301,7 +301,7 @@ switch($_POST['action']){
         $ConsultaEA = $_POST['InputEditAsig'];
 //        echo $ConsultaEA;
 //        return;
-//        header('location: ../index.php?action=*-*');
+//        header('location: ../home.php?action=*-*');
         //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
         InactivarProfesor($ConsultaEA);
         
@@ -313,7 +313,7 @@ switch($_POST['action']){
         $ConsultaEA = $_POST['InputEditAsig'];
 //        echo $ConsultaEA;
 //        return;
-//        header('location: ../index.php?action=*-*');
+//        header('location: ../home.php?action=*-*');
         //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
         ActivarProfesor($ConsultaEA);
         
@@ -325,11 +325,11 @@ switch($_POST['action']){
 
         $ConsultaEA = $_POST['PMatricula'];
 //        echo $ConsultaEA;
-//        header('location: ../index.php?action=*P*');
+//        header('location: ../home.php?action=*P*');
         //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
 //        echo $ConsultaEA;
         UpdateProfesor($ConsultaEA);
-        header('location: ../index.php?action=UPP');
+        header('location: ../home.php?action=UPP');
         
 
         break;
@@ -340,7 +340,7 @@ switch($_POST['action']){
         $ConsultaEA = $_POST['InputEditAsig'];
 //        echo $ConsultaEA;
 //        return($_POST['InputEditAsig']);
-//        header('location: ../index.php?done="lavida"');
+//        header('location: ../home.php?done="lavida"');
 //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
         EliminarAsignatura($ConsultaEA);
         
@@ -353,7 +353,7 @@ switch($_POST['action']){
         $ConsultaEA = $_POST['InputEliminarClase'];
 //        echo $ConsultaEA;
 //        return($_POST['InputEditAsig']);
-//        header('location: ../index.php?done="lavida"');
+//        header('location: ../home.php?done="lavida"');
 //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
         EliminarClase($ConsultaEA);
         
@@ -366,7 +366,7 @@ switch($_POST['action']){
         $ConsultaEA = $_POST['InputEliminarHorario'];
 //        echo $ConsultaEA;
 //        return($_POST['InputEditAsig']);
-//        header('location: ../index.php?done="lavida"');
+//        header('location: ../home.php?done="lavida"');
 //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
         EliminarHorario($ConsultaEA);
         
@@ -379,7 +379,7 @@ switch($_POST['action']){
 ////        $ConsultaEA = $_POST['InputEditAsig'];
 ////        echo $ConsultaEA;
 ////        return($_POST['InputEditAsig']);
-////        header('location: ../index.php?done="lavida"');
+////        header('location: ../home.php?done="lavida"');
 //        //Mas un alert que se agregara con colorsito y redireccionamiento al home o reports. 
 //        EliminarHorario();
 //        
@@ -388,7 +388,7 @@ switch($_POST['action']){
 
     case "addProf":
         addProf('profesor');
-        header('location: ../index.php?action=addedProf');
+        header('location: ../home.php?action=addedProf');
         
     break;
     case "verDetalles":
@@ -910,7 +910,7 @@ function EliminarAsignatura($CC){
 //    mysqli_query($conexion, $ConsultaEA);
 //    echo $CC;
 //    return("Estoy mandando algo");
-//    header('location: ../index.php?done="lavida"');
+//    header('location: ../home.php?done="lavida"');
 };
 function EliminarClase($CC){
     $ConsultaEA = "DELETE FROM proyecto_ponchador.clases_creadas where Proyecto_ponchador.clases_creadas.Nombre = '$CC'";
@@ -975,7 +975,7 @@ function EliminarHorario($CC){
 ////    mysqli_query($conexion, $ConsultaEA);
 ////    echo $CC;
 ////    return("Estoy mandando algo");
-////    header('location: ../index.php?done="lavida"');
+////    header('location: ../home.php?done="lavida"');
 //};
 
 function UpdateAsignatura($Data){

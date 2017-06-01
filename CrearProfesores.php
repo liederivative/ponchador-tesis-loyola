@@ -125,7 +125,7 @@
 
             <button type="submit" class="btn btn-primary">Enviar</button>
 
-            <a href="index.php" class="btn btn-primary">Cancelar</a>
+            <a href="home.php" class="btn btn-primary">Cancelar</a>
 
         </div>
 

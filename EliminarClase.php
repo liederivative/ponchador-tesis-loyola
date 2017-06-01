@@ -153,7 +153,7 @@
 //                Event.stopPropagation();
                 if(data==="ss"){
                     $('#AlertSS').show();
-//                  location ='index.php?action=CE';
+//                  location ='home.php?action=CE';
 //                    document.write(data);
                     $('#InputEliminarClase').val("");
                     

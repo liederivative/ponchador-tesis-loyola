@@ -675,7 +675,7 @@
                                 $('#alertOk').show();
                                 
                                 $('#alertOk').fadeTo(5000, 500).slideUp(3000, function () {
-                                    $('#alertOk').slideUp(500, window.location.href='index.php?action=HE');
+                                    $('#alertOk').slideUp(500, window.location.href='home.php?action=HE');
                                 });
 
                             }

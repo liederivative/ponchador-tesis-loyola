@@ -146,7 +146,7 @@
                 document.write(data);
                 if(data==="ss"){
                     $('#infosE').hide();
-                  location ='index.php?action=EH';
+                  location ='home.php?action=EH';
 
                     
 

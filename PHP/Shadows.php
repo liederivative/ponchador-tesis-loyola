@@ -12,7 +12,7 @@ define('BarNav','
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.php" class="navbar-brand"><span class="glyphicon glyphicon-home Sicon1"></span> PosibleLogo</a>
+                <a href="home.php" class="navbar-brand"><span class="glyphicon glyphicon-home Sicon1"></span> PosibleLogo</a>
 
             </div>
             
