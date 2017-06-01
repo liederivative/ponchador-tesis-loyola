@@ -19,7 +19,7 @@
 </head>
 
 <body class="body1">
-
+    <p>testing acces to this file</p>
     <div class="container">
         <?php echo BarNav?>
 
