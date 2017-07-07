@@ -11,6 +11,8 @@ Tesis en el area de Redes y Telecomunicaciones del IEESL - 2017-2018.
 > php 5.6 |  [windows](http://windows.php.net/download/)
 > 
 > MySQL >= 5.6 | [windows](https://dev.mysql.com/downloads/)
+>
+> Microsoft Drivers for PHP for SQL Server | [windows](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
 
 ### Pasos
 1. Clonar este repositorio: `git clone https://github.com/liederivative/ponchador-tesis-loyola`
