@@ -15,6 +15,9 @@
     <div class="alert alert-warning ND" id="alertNHorario">
         <p><strong>Error: </strong> No se encontro ninguna coincidencia con el <strong>horario</strong> utilizado.</p>
     </div>
+    <div class="alert alert-warning ND" id="Duplicate_Record">
+        <p><strong>Error: </strong> Ya existe una clase asignada a este profesor en ese <strong>horario</strong>.</p>
+    </div>
     <div class="alert alert-warning ND" id="alertNP">
         <p><strong></strong> No Existe ninguna coincidencia con el campo <strong>profesor</strong>.</p>
     </div>
@@ -211,6 +214,9 @@
                                 $('#alertClaseDupli').show();
                                 return false;
                                 //                    document.write("cool");
+                            } else if (d === "Duplicate_Record") {
+                                $('#Duplicate_Record').show();
+                                return false;
 
                             } else if (d === "ok") {
                                 $('#alertTodoBien').show((e) => {

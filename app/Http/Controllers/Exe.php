@@ -572,6 +572,14 @@ function crearClase(){
     $Seccion = $_POST['FSeccion'];
     $claseNombre = $_POST['NombreClase'];
     
+    $testAsignatura = "select * from  clases_creadas where PMatricula='$profesor' and NHorario='$horario'";
+    $Result = DB::select($testAsignatura);    
+    if (count($Result)>0){
+        echo "Duplicate_Record";
+        exit;
+    }
+    
+    
 //ver si ya la asignatura esta asignada
     $testAsignatura = "select * from  clases_creadas where ACodigo='$Asignatura' and ASeccion='$Seccion'";
     $Result = DB::select($testAsignatura);    
