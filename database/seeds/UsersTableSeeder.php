@@ -25,8 +25,7 @@ class UsersTableSeeder extends Seeder
                 'lastname' => $faker->lastName,
                 'username'=> $faker->userName,
 	            'email' => $faker->email,
-	            'password' => bcrypt('secret'),
-                'id_fingerprint'=> $faker->numberBetween(10000,20000)
+	            'password' => bcrypt('secret')
             ]);
             
         }

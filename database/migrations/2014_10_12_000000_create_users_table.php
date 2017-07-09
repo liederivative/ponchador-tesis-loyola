@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('username')->unique();
-            $table->string('id_fingerprint')->default('NULL');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

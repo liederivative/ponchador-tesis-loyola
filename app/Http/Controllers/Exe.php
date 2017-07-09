@@ -1329,7 +1329,7 @@ $SELECT = "SELECT Nombre FROM  clases_creadas WHERE  clases_creadas.Nombre = '$N
         } else{
 
                 //Estring para insertar en la db//
-                $INSERTINTO = "INSERT INTO  asignatura(CNombre, ACodigo, ACreditos, ACuatrimestre, ANombre, Laboratorio, ASeccion) VALUES ('$FCarrera', '$FCodigoAsignatura','$FCantidadCreditos','$FCicloAsignatura','$FAsignatura',$Lab,'$FSeccion')";
+                $INSERTINTO = "INSERT INTO  asignatura(CNombre, ACodigo, ACreditos, ACuatrimestre, ANombre, Laboratorio, ASeccion) VALUES ('$FCarrera', '$FCodigoAsignatura','$FCantidadCreditos','$FCicloAsignatura','$FAsignatura',".((int) $Lab).",'$FSeccion')";
 
                 //Ejecutar todo para db//
                 $data = DB::insert($INSERTINTO);

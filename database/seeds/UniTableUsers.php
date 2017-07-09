@@ -23,8 +23,7 @@ class UniTableUsers extends Seeder
                 'lastname' => 'Gradian',
                 'username'=> 'root',
 	            'email' => 'root@root.com',
-	            'password' => bcrypt('123456'),
-                'id_fingerprint'=>12345,
+	            'password' => bcrypt('123456')
             ]);
 
         // Role : USER

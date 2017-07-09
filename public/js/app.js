@@ -44270,14 +44270,13 @@ var FileUser = function (_Component) {
                 role: {
                     description: 'Role debe existir',
                     type: 'string'
-                },
-                id_fingerprint: {
-                    description: 'El id_fingerprint debe tener un al menos 5 números',
-                    type: 'string',
-                    minLength: 5,
-                    default: 'NULL'
-                }
-            }
+                    //            ,id_fingerprint: {
+                    //                description: 'El id_fingerprint debe tener un al menos 5 números',
+                    //                type: 'string',
+                    //                minLength: 5,
+                    //                default: 'NULL'
+                    //              }
+                } }
         };
 
         return _this;
@@ -44394,9 +44393,9 @@ var FileUser = function (_Component) {
                 case 'username':
                     shadowState.item[key] = app.replaceSpaces(e.target.value);
                     break;
-                case 'id_fingerprint':
-                    shadowState.item[key] = app.onlyNumbers(e.target.value);
-                    break;
+                //            case 'id_fingerprint':
+                //                shadowState.item[key] = app.onlyNumbers(e.target.value);
+                //                break;
                 default:
                     shadowState.item[key] = e.target.value;
                     break;
