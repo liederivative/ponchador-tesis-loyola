@@ -69,19 +69,22 @@
     </div>
 
     <script>
+        function datalist(){
+            $.post('/exe',{
+           action: 'dataList',
+           select: 'select Nombre from clases_creadas'
+               }, (d,s)=>{
+                   $('#claseList').html(d);
+        //           document.write(d);
+               });
+        }
          $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
 
         });
-       $.post('/exe',{
-           action: 'dataList',
-           select: 'select Nombre from clases_creadas'
-       }, (d,s)=>{
-           $('#claseList').html(d);
-//           document.write(d);
-       });
+        datalist();
         
         $('#Eliminar').click((e) => {
 //           $('#salir').show();
@@ -136,7 +139,7 @@
                     $('#AlertSS').show();
 //                    document.write(data);
                     $('#InputEliminarClase').val("");
-                    
+                    datalist();
 
                     
                 } else {
