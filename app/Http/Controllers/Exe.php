@@ -1062,7 +1062,7 @@ function EliminarClaseConsulta($CC){
     
     $CargarData = DB::select($SELECTFROM);
 //    print_r( $CargarData);
-    if($CargarData === "fail"){
+    if(empty($CargarData)){
         echo "fail";
         exit();
     }else{

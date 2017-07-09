@@ -7,7 +7,7 @@
         <p><strong>Asignatura ha sida eliminada</strong></p>
     </div>
     <div class="alert alert-success ND" id="alertE">
-        <p><strong>Ah ocurrido un error, favor comunicarse con el administrados.</strong></p>
+        <p><strong>Al parecer algo esta mal, de continuar así comunicarse con su Departamento de TI.</strong></p>
     </div>
     <!-- 
         <div>
