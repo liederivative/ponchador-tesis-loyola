@@ -16,8 +16,8 @@
         </div>
 
         <div class="col-xs-6 form-group">
-            <label for="cedula" class="labelc1">Cédula</label>
-            <input  pattern="[0-9]{3}-[0-9]{7}-[0-9]{1}" title="eg. 012-3456789-0" id="cedula-prof-create" type="text" name="PCedula" placeholder="Cédula" class="form-control" required >
+            <label for="cedula" class="labelc1">Identificación</label>
+            <input title="eg. 012-3456789-0" id="cedula-prof-create" type="text" name="PCedula" placeholder="Cédula/Pasaporte" class="form-control" required >
         </div>
         <div class="col-xs-6 form-group">
             <label for="telefono" class="labelc1">Identificaci&oacute;n del Profesor</label>

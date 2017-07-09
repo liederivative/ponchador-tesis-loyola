@@ -21,10 +21,10 @@ $(document).ready(function () {
         t.value = t.value.replace(/[^\-0-9]/g, '');
     }
     
-    $("#cedula-prof-create").keyup((e)=>{
-        r =[/(\d{3})\-?(\d{7})\-?(\d{1})/g, '$1-$2-$3',13];
-        mask(r,e,e.target);
-    });
+//    $("#cedula-prof-create").keyup((e)=>{
+//        r =[/(\d{3})\-?(\d{7})\-?(\d{1})/g, '$1-$2-$3',13];
+//        mask(r,e,e.target);
+//    });
     var patternPhone =[/(\d{3})\-?(\d{3})\-?(\d{4})/g, '$1-$2-$3',12];
     $('input[name=PCelular]').keyup((e)=>{
         mask(patternPhone,e,e.target);
