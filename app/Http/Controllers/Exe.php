@@ -82,7 +82,7 @@ class Exe extends Controller
             }
 //fin de comprobacion
         
-        actionReposition($nombreClase, $diaDeReposicion, $Entrada, $Salida);
+        $this->actionReposition($nombreClase, $diaDeReposicion, $Entrada, $Salida);
         
         break;
     
@@ -1246,7 +1246,7 @@ function CargarHorarios($CC){
 //    print_r( $CargarData);
 //    if()
         if(!$CargarData){
-            print_r($CargarData);
+            print_r("Horario no es válido");
         }
     $this->display_data($CargarData);
 //    $json = json_encode($CargarData);

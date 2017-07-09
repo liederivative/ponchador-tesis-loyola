@@ -54,6 +54,7 @@
                     action: 'Horarios',
                     AHorarios: $('#AHorarios').val()
                 }, (data, status) => {
+                    console.log(data);
                     $('#TableH').html(data)
 //                    document.write(data);
                         //                            console.log(d);
