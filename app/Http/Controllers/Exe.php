@@ -73,16 +73,17 @@ class Exe extends Controller
             exit;
         }
         //error en horario
-        $tin = strtotime($Entrada);
-        $tout = strtotime($Salida);
+        $in = strtotime($Entrada);
+        $out = strtotime($Salida);
 //        echo var_dump($tin);exit;
-            if($tin>=$tout){
+            if($in>=$out){
                 echo "HE";
                 exit;
             }
 //fin de comprobacion
-        
-        $this->actionReposition($nombreClase, $diaDeReposicion, $Entrada, $Salida);
+       $Entrada = date("Y-m-d H:i:s", strtotime($diaDeReposicion.' '.$Entrada) );
+        $Salida = date("Y-m-d H:i:s", strtotime($diaDeReposicion.' '.$Salida) );
+        $this->actionReposition($nombreClase, date("Y-m-d H:i:s",strtotime($diaDeReposicion)), $Entrada, $Salida);
         
         break;
     

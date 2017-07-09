@@ -221,6 +221,7 @@
 
         function resetFields() {
             $('#formReposicion').find('input:text, input:password, input:file, select, textarea').val('');
+            $('input[name=action]').val('horarioReposicion');
             $('#formReposicion').find('input:radio, input:checkbox')
                 .removeAttr('checked').removeAttr('selected');
         }

@@ -371,11 +371,10 @@ INSERT INTO `profesores` (`ID`, `PNombre`, `PApellido`, `PCedula`, `PCelular`, `
 
 CREATE TABLE `reposiciones` (
   `ID` int(4) NOT NULL,
-  `asignatura` varchar(15) NOT NULL,
-  `seccion` int(3) NOT NULL,
-  `profesor` varchar(15) NOT NULL,
-  `HIN` datetime(6) NOT NULL,
-  `HOUT` datetime(6) NOT NULL
+  `NombreClase` varchar(15) NOT NULL,
+  `DiaReposicion` datetime(6) NOT NULL,
+  `Entrada` time(6) NOT NULL,
+  `Salida` time(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
