@@ -20,7 +20,7 @@
             <input title="eg. 012-3456789-0" id="cedula-prof-create" type="text" name="PCedula" placeholder="Cédula/Pasaporte" class="form-control" required >
         </div>
         <div class="col-xs-6 form-group">
-            <label for="telefono" class="labelc1">Identificaci&oacute;n del Profesor</label>
+            <label for="telefono" class="labelc1">ID Control tiempo</label>
             <input type="text" name="PMatricula" placeholder="ID para sistema de control tiempo" class="form-control" required pattern="[0-9]{5}" title="eg. 0001">
         </div>
         <div class="col-xs-6 form-group">

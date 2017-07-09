@@ -770,7 +770,9 @@ function addProf($CC){
 
                 <div class='alert alert-danger container alertCondi'  id='fadeout'>
             <button type='button' class='close' data-dismiss='alert'>x</button>
-            <p><strong>Lo Sentimos!!</strong> Ya existe un profesor con &eacute;sta matr&iacute;cula en el sistema</p> 
+            <p><strong>Lo Sentimos!!</strong> Ya existe un profesor con estos datos en el sistema</p> 
+            <p><strong>Causa:</strong> Puede tener un ID, como cédula, pasaporte o ID de control de tiempo repetido.
+            Favor verificar las entrada de datos.</p> 
         </div>
 
             <script>
