@@ -135,7 +135,7 @@ class RoleAPI extends Controller
     public function destroy($id)
     {
         $role = Role::findOrFail($id);
-        if($role->name !='root'){
+        if($role->name !='root' || $role->name !='admin'){
             $role->delete();
             return ['role'=>$role];
         }
