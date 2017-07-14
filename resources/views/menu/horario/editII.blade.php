@@ -12,28 +12,28 @@
         $Nombre = urldecode($_GET['Nombre']);
 //        echo $Nombre;
         
-        if(urldecode($_GET['LunesDe'])==='00:00:00'){$LunesDe="";$LunesHasta="";}else{
+        if(urldecode($_GET['LunesDe'])==='00:00:00' || urldecode($_GET['LunesDe'])=='null'){$LunesDe="";$LunesHasta="";}else{
             $LunesDe = urldecode($_GET['LunesDe']);
             $LunesHasta = urldecode($_GET['LunesHasta']);
         }
         
-        if(urldecode($_GET['MartesDe'])==='00:00:00'){$MartesDe="";$MartesHasta="";}else{
+        if(urldecode($_GET['MartesDe'])==='00:00:00' || urldecode($_GET['MartesDe'])=='null'){$MartesDe="";$MartesHasta="";}else{
             $MartesDe = urldecode($_GET['MartesDe']);
             $MartesHasta = urldecode($_GET['MartesHasta']);
         }
-        if(urldecode($_GET['MiercolesDe'])==='00:00:00'){$MiercolesDe="";$MiercolesHasta="";}else{
+        if(urldecode($_GET['MiercolesDe'])==='00:00:00' || urldecode($_GET['MiercolesDe'])=='null'){$MiercolesDe="";$MiercolesHasta="";}else{
             $MiercolesDe = urldecode($_GET['MiercolesDe']);
             $MiercolesHasta = urldecode($_GET['MiercolesHasta']);
         }
-        if(urldecode($_GET['JuevesDe'])==='00:00:00'){$JuevesDe="";$JuevesHasta="";}else{
+        if(urldecode($_GET['JuevesDe'])==='00:00:00' || urldecode($_GET['JuevesDe'])=='null'){$JuevesDe="";$JuevesHasta="";}else{
             $JuevesDe = urldecode($_GET['JuevesDe']);
             $JuevesHasta = urldecode($_GET['JuevesHasta']);
         }
-        if(urldecode($_GET['ViernesDe'])==='00:00:00'){$ViernesDe="";$ViernesHasta="";}else{
+        if(urldecode($_GET['ViernesDe'])==='00:00:00' || urldecode($_GET['ViernesDe'])=='null'){$ViernesDe="";$ViernesHasta="";}else{
             $ViernesDe = urldecode($_GET['ViernesDe']);
             $ViernesHasta = urldecode($_GET['ViernesHasta']);
         }
-        if(urldecode($_GET['SabadoDe'])==='00:00:00'){$SabadoDe="";$SabadoHasta="";}else{
+        if(urldecode($_GET['SabadoDe'])==='00:00:00' || urldecode($_GET['SabadoDe'])=='null'){$SabadoDe="";$SabadoHasta="";}else{
             $SabadoDe = urldecode($_GET['SabadoDe']);
             $SabadoHasta = urldecode($_GET['SabadoHasta']);
         }
