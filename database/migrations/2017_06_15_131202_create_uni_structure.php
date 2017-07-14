@@ -23,6 +23,13 @@ class CreateUniStructure extends Migration
                 $table->string('oper_uni');
                 $table->timestamps();
             }); 
+//            DB::unprepared('
+//            CREATE TRIGGER tr_User_Default_Member_Role AFTER INSERT ON `users` FOR EACH ROW
+//                BEGIN
+//                    INSERT INTO role_user (`role_id`, `user_id`, `created_at`, `updated_at`) 
+//                    VALUES (3, NEW.id, now(), null);
+//                END
+//            ');
         }
         DB::unprepared(Storage::get('migration.sql'));
     }
@@ -38,6 +45,7 @@ class CreateUniStructure extends Migration
         foreach($tables as $table){
             Schema::dropIfExists($table);
         }
+//        DB::unprepared('DROP TRIGGER `tr_User_Default_Member_Role`');
         
     }
 }

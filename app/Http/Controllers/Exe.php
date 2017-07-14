@@ -107,8 +107,8 @@ class Exe extends Controller
         break;
     
     case "ProfList":
-        $this->ListadoGral();
-        
+        $data = $this->ListadoGral();
+        return response()->json($data);
         break;
         
         
@@ -1152,6 +1152,9 @@ function ConsultarProfesor($CC){
 function ListadoGral(){
 
     $SELECTFROM = "SELECT PNombre as Nombre, PApellido as Apellido, PCelular as Celular, PMatricula as Matricula, PDireccion as Direccion, PTelefono as Telefono,  estado.Estado FROM  profesores INNER JOIN  estado on ( estado.ID =  profesores.Estatus)";
+    
+    $SELECTFROM = "SELECT PNombre as Nombre, PApellido as Apellido, PCelular as Celular, PMatricula as Matricula, PDireccion as Direccion, PTelefono as Telefono, `DisponibilidadLunes`,`DisponibilidadMartes`,`DisponibilidadMiercoles`,`DisponibilidadJueves`,`DisponibilidadViernes`,`DisponibilidadSabado`,`HorarioDiurno`,`HorarioVespertino`,`HorarioNocturno`, estado.Estado FROM  profesores INNER JOIN  estado on ( estado.ID =  profesores.Estatus)";
+    
 //    $SELECTFROM = "SELECT * FROM  profesores";
     
 //    echo $SELECTFROM;
@@ -1169,9 +1172,8 @@ function ListadoGral(){
     $CargarData = DB::select($SELECTFROM);
 //    print_r( $CargarData);
 //    if()
-    $this->display_data3($CargarData);
-//    $json = json_encode($CargarData);
-//    echo $json;
+//    $this->display_data3($CargarData);
+    return $CargarData;
     
     
 

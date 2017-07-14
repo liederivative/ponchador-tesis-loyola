@@ -353,15 +353,15 @@ CREATE TABLE `profesores` (
 --
 
 INSERT INTO `profesores` (`ID`, `PNombre`, `PApellido`, `PCedula`, `PCelular`, `PMatricula`, `PDireccion`, `Estatus`, `PTelefono`, `DisponibilidadLunes`, `DisponibilidadMartes`, `DisponibilidadMiercoles`, `DisponibilidadJueves`, `DisponibilidadViernes`, `DisponibilidadSabado`, `HorarioDiurno`, `HorarioVespertino`, `HorarioNocturno`) VALUES
-(10, 'Oleo', 'Costa Ramirez', '024-1219562-1', '829-578-6247', '02-28-2017', 'Calle la nova, ciudad catalina rondon 4to', 1, '456-789-4455', b'1', b'1', b'1', b'1', b'0', b'1', b'0', b'0', b'1'),
-(11, 'aa', 'aa', 'aaaa', 'aa', 'aaa', 'aa', 0, 'aa', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'0'),
-(12, 'leonel', 'acosta', '000-0000000-0', '879-987-8523', '15-98-2008', 'prueba de funcionalidad 015', 1, '789-789-7894', b'1', b'1', b'0', b'0', b'1', b'0', b'0', b'1', b'0'),
-(13, 'bombero', 'archimago', '000-0000000-7', '123-456-7890', '78-96-2586', 'prueba de evaluacion final 014', 0, '789-789-7894', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1'),
-(14, 'norverto', 'ramirez', '000-1921685-2', '897-456-1236', '2589-9853', 'distraction', 0, '809-819-4569', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
-(17, 'Mateo', 'surdeo', '000-0000000-7', '829-578-6247', 'aaaa-0000', 'asdwadwsadw', 0, '829-578-6245', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
-(18, 'ramon', 'galarto', '000-0000000-7', '879-987-8523', 'aaaa-1111', 'fefdesrgfsfcsr', 0, '829-578-6245', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
-(19, 'ramonada', 'galarto beta', '000-0200000-7', '879-987-8523', 'aaaa-2222', 'fefdesrgfsfcsr', 0, '829-578-6145', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
-(20, 'djbuash', 'dhebudysb', '001-7894564-0', '809-895-5478', 'mtaa-4896', '`cdsxaz', 0, '', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'1', b'0');
+(10, 'Oleo', 'Costa Ramirez', '024-1219562-1', '829-578-6247', '00000001', 'Calle la nova, ciudad catalina rondon 4to', 1, '456-789-4455', b'1', b'1', b'1', b'1', b'0', b'1', b'0', b'0', b'1'),
+(11, 'aa', 'aa', 'aaaa', 'aa', '00000010', 'aa', 0, 'aa', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'0'),
+(12, 'leonel', 'acosta', '000-0000000-0', '879-987-8523', '00000002', 'prueba de funcionalidad 015', 1, '789-789-7894', b'1', b'1', b'0', b'0', b'1', b'0', b'0', b'1', b'0'),
+(13, 'bombero', 'archimago', '000-0000000-7', '123-456-7890', '00000003', 'prueba de evaluacion final 014', 0, '789-789-7894', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1'),
+(14, 'norverto', 'ramirez', '000-1921685-2', '897-456-1236', '00000005', 'distraction', 0, '809-819-4569', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
+(17, 'Mateo', 'surdeo', '000-0000000-7', '829-578-6247', '00000006', 'asdwadwsadw', 0, '829-578-6245', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
+(18, 'ramon', 'galarto', '000-0000000-7', '879-987-8523', '00000007', 'fefdesrgfsfcsr', 0, '829-578-6245', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
+(19, 'ramonada', 'galarto beta', '000-0200000-7', '879-987-8523', '00000008', 'fefdesrgfsfcsr', 0, '829-578-6145', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
+(20, 'djbuash', 'dhebudysb', '001-7894564-0', '809-895-5478', '00000009', '`cdsxaz', 0, '', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'1', b'0');
 
 -- --------------------------------------------------------
 

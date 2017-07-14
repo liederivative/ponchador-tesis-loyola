@@ -45,12 +45,12 @@ class Kernel extends ConsoleKernel
                     
                     
                     $internal = $irecords->all();
-                    $internal = ($internal->isEmpty())?[]:$internal;
-                    $erecords->setConnection('ponche_uni_intec');// $uniName);
+                    $internal = ($internal->isEmpty())?[]:$internal->toArray();
+                    $erecords->setConnection($uniName); //'ponche_uni_intec');// 
                     $external = $erecords->where('EmplID','>','00000000')->get();
                     $external = $external->toArray();
 //                    echo $internal;
-//                    dd($external);
+//                    dd($internal);
                     
 
                     
@@ -60,7 +60,9 @@ class Kernel extends ConsoleKernel
                                                 return $arr + ['oper_uni' => $identifier];
                                             }, $newInfo);
                     
-                    $irecords->updateOrCreate($newInfo);
+                    foreach($newInfo as $record){
+                        $irecords->updateOrCreate($record);
+                    }
                     
                 }
             }
