@@ -45,7 +45,11 @@ CREATE TABLE `carreras` (
   `CNombre` varchar(50) NOT NULL COMMENT 'Carreras que se imparten.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+INSERT INTO `carreras` (`ID`, `CNombre`) VALUES
+(1, 'RyT'),
+(2, 'Agroindustrial'),
+(3, 'Electrica'),
+(4, 'Industrial');
 
 -- --------------------------------------------------------
 

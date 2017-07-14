@@ -21,7 +21,7 @@
         </div>
         <div class="col-xs-6 form-group">
             <label for="telefono" class="labelc1">ID Control tiempo</label>
-            <input type="text" name="PMatricula" placeholder="ID para sistema de control tiempo" class="form-control" required pattern="[0-9]{5}" title="eg. 0001">
+            <input type="text" name="PMatricula" placeholder="ID para sistema de control tiempo" class="form-control" required pattern="[0-9]{8}" title="eg. 00000001">
         </div>
         <div class="col-xs-6 form-group">
             <label for="telefono" class="labelc1">Teléfono</label>
