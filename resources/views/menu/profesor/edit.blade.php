@@ -5,7 +5,7 @@
 <h2 class="h2EH">Editar Profesor</h2>
     
         <div class="alert alert-info">
-            <p><strong>Info Extra!</strong> Para traer el <b>Profesor</b> deseada introduzca <b>La matr&iacute;cula</b> en el cuadro de texto debajo</p>
+            <p><strong>Info Extra!</strong> Para traer el <b>Profesor</b> deseado introduzca <b>La matr&iacute;cula</b> en el cuadro de texto debajo</p>
         </div>
     
     

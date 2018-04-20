@@ -69,14 +69,19 @@
 
                     <form class="CrearAsignaturaForm" onsubmit="return validar();" id="form">
 
-                        <h2>Crear Horario</h2>
+                        <h2>Editar Horario</h2>
                         <input type="text" name="oldName" hidden value="<?php echo $Nombre; ?>">
                         <input type="text" hidden name="action" value="ActualizarHorario">
 
-                        <div action="" class="EAFR col-md-12 col-xs-12 col-lg-12">
+                        <div action="" class="EAFR col-md-6 col-xs-6 col-lg-6">
                             <!--                            <div class="col-xs-6">-->
+                                <label for="nombreHorario">Nombre Para Horario</label>
                             <input id="nombreHorario" name="nombreHorario" type="text" class="form-control" placeholder=" Nombre eg. L8:30 o Autocad-01" value="<?php echo urldecode($_GET['Nombre']);?>" autofocus required>
                             <!--                            </div>-->
+                        </div>
+                        <div action="" class="EAFR col-md-6 col-xs-6 col-lg-6">
+                            <label for="aliasHorario">Alias Para Horario</label>
+                            <input id="aliasHorario" name="aliasHorario" type="text" class="form-control" placeholder="Eg. L8:30 M7:30" value="<?php echo urldecode($_GET['Alias']);?>" required>
                         </div>
                         <!--
                         <div action="" class="EAFR col-md-6 col-xs-6 col-lg-6">

@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/home" class="navbar-brand"><span class="glyphicon glyphicon-home Sicon1"></span> PosibleLogo</a>
+                <a href="/home" class="navbar-brand"><span class="glyphicon glyphicon-home Sicon1"></span> SIDACOE</a>
 
             </div>
             

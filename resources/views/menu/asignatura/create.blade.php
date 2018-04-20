@@ -44,7 +44,7 @@
 
             </div>
 
--->
+
             <div class="col-xs-6 form-group">
                 <label for="Carrera" class="">Carrera<span class="Requerido"> *</span></label>
                 <select class="form-control" name="FCarrera" id="carrera">
