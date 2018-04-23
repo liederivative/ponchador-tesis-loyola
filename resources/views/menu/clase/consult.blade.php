@@ -8,11 +8,11 @@
             <div class="input-group">
                 <span class="filtroClases">
                             <select class="btn selectCon" name="Campo-tabla" id="CTabla">
-                                <option selected hidden disabled>Filtrar por</option>
-                                <option value="clases_creadas.Nombre">Clase</option>
-                                <option value="asignatura.ANombre">Asignatura</option>
-                                <option value="profesores.PNombre">Profesor</option>
-                                <option value="clases_creadas.NHorario">Horario</option>
+                                <option hidden disabled>Filtrar por</option>
+<!--                                <option value="clases_creadas.Nombre">Clase</option>-->
+                                <option selected value="ANombre">Asignatura</option>
+                                <option value="PNombre">Profesor</option>
+                                <option value="NHorario">Horario</option>
                             </select>
         
                 </span>
@@ -21,6 +21,9 @@
     
             </div>
         </div>
+        <datalist id="dataList">
+            
+        </datalist>
     </div>
     <!--    <div class="container">-->
     <div class="todoDetalle" id="todoDetalle">
@@ -69,22 +72,36 @@
     
     <input type="hidden" id="limite" value="10">
     <script>
-        $(document).ready(function() {
+        //****************************************************************************************
+//load datalist depending of the option selected
+//                            console.log('i am goot');
+                function dataList(){
+                    $.post('/exe',{
+                        action: 'dataList',
+                        select: $('#CTabla').val(),
+                    }, (d,s)=>{
+                            $('#dataList').html(d);
+                        });
+                }
 
+$(document).ready(function() {
+            
+//****************************************************************************************
+// when the data is too much the limit depend of the input id='limite'         
             $(window).scroll(function() {
                 if ($(document).height() <= $(window).scrollTop() + $(window).height()) {
                     loadmore(0);
                 }
             });
+//****************************************************************************************
 
             function loadmore(te) {
                 var q = Number($('#limite').val()) + 5;
-                //                if(te != 1){
-                //                var valor = $('#limite').val();  
-                //                }else{var valor = $('#limite').val();}
+                
                 $('#limite').val(q);
-                //                console.log($('#limite').val());
-                //alert($('#Campo-tabla').val());
+                
+                    console.log('i am goot');
+                
                 $.post('/exe', {
                     action: 'ConsultaClaseLimit',
                     limite: q,
@@ -104,29 +121,33 @@
             }
             loadmore(0);
 
-            //this function call the ajax info when ASeccion and then ACodigo select luego input
-
-
+//****************************************************************************************
+// Triggers for dataList
             $(function() {
                 //Carlos if select change => event to Acodigo
                 $('#CTabla').change(function() {
-                    //                var data = $(this).val();
-                    fadeOut('#todoDetalle');
-                    //                    $('#d01').hide();
-                    //                    $('#d02').hide();
-                    //                    $('#d03').hide();
 
-                    console.log("primero columna");
+                    fadeOut('#todoDetalle');
+                    $('#CFiltro').val('');
+                    dataList();
+//****************************************************************************************
+//trigger focus on search bar                     
                     $("#CFiltro").on('input', function() {
-                        console.log("segundo input");
                         loadmore(1);
                     });
 
                 });
             });
-
-            //this function call the ajax info when ACodigo and then ASeccion input luego select
-
+//****************************************************************************************
+//initial datalist data
+                    $.post('/exe',{
+                        action: 'dataList',
+                        select: $('#CTabla').val(),
+                    }, (d,s)=>{
+                            $('#dataList').html(d);
+                        });
+//****************************************************************************************
+//this function call the ajax info when ACodigo and then ASeccion input luego select
             $("#CFiltro").on('input', function() {
                 console.log("primero input");
 
@@ -141,12 +162,14 @@
                 });
             });
         });
-
     </script>
     <script>
+//****************************************************************************************
+//Load data about every classes; in the first time we can't see the function trigger beacuese it come with the initial data load from database and formatted with the /exe.php. used a devtool to see what i load or go diretly to /exe.php and analize the code.
+        
         function verDetalles(data) {
 
-            //                    document.write('data');
+//                                document.write(data);
                 $('#todoDetalle').show();
             $('#limite').val(-100);
 
@@ -154,7 +177,8 @@
             $.post('/exe', {
                 action: "verDetalles",
                 selector: 1,
-                campo: data
+                campo: data,
+
                 //                filtro: $('#Campo-filtro').val()
             }, (d, s) => {
                 //                document.write(d);
@@ -164,7 +188,8 @@
                 $.post('/exe', {
                     action: "verDetalles",
                     selector: 2,
-                    campo: data
+                    campo: data,
+
 
                 }, (d, s) => {
                     $('#TableP').html(d);
@@ -173,7 +198,8 @@
                     $.post('/exe', {
                         action: "verDetalles",
                         selector: 3,
-                        campo: data
+                        campo: data,
+
                     }, (d, s) => {
                         $('#TableH').html(d);
                         $('#d03').show();
