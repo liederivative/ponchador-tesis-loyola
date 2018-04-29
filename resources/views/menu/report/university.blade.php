@@ -2,6 +2,7 @@
 
 
 @section('content')
+
 <div class="col-sm-12 col-xs-12 canvas-reports">
         <canvas id="patria" width="50" height="25" class="canvas-reports"></canvas>
     </div>
