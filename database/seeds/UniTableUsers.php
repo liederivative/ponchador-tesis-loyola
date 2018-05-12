@@ -29,15 +29,15 @@ class UniTableUsers extends Seeder
         // Role : USER
         $owner = new Role();
         $owner->name         = 'user';
-        $owner->display_name = 'Role Consulta '; // optional
-        $owner->description  = 'Role para consultar en general'; // optional
+        $owner->display_name = 'Rol Consulta '; // optional
+        $owner->description  = 'Rol para consultar en general'; // optional
         $owner->save();
         
          // Role : EDITOR
         $editor = new Role();
         $editor->name         = 'editor';
-        $editor->display_name = 'Role Universiad Edición'; // optional
-        $editor->description  = 'Role para editar y consultar '; // optional
+        $editor->display_name = 'Rol Universiad Edición'; // optional
+        $editor->description  = 'Rol para editar y consultar '; // optional
         $editor->save();
          
          // Role : ADMIN
@@ -59,7 +59,7 @@ class UniTableUsers extends Seeder
         $create->name         = 'create';
         $create->display_name = 'Crear en general'; // optional
         // Allow a user to...
-        $create->description  = 'Crea cosas'; // optional
+        $create->description  = 'Crea entradas'; // optional
         $create->save();
          
         // PERM: EDIT
@@ -67,7 +67,7 @@ class UniTableUsers extends Seeder
         $edit->name         = 'edit';
         $edit->display_name = 'Edita en general'; // optional
         // Allow a user to...
-        $edit->description  = 'Edita cosas'; // optional
+        $edit->description  = 'Edita entradas'; // optional
         $edit->save();
          
         // PERM: CONSULT
@@ -75,15 +75,15 @@ class UniTableUsers extends Seeder
         $consult->name         = 'consult';
         $consult->display_name = 'Consulta en general'; // optional
         // Allow a user to...
-        $consult->description  = 'Consulta cosas'; // optional
+        $consult->description  = 'Consulta entradas'; // optional
         $consult->save();
 
         // PERM: DELETE
         $delete = new Permission();
         $delete->name         = 'delete';
-        $delete->display_name = 'Borra en general'; // optional
+        $delete->display_name = 'Borrar en general'; // optional
         // Allow a user to...
-        $delete->description  = 'Borra cosas'; // optional
+        $delete->description  = 'Borrar entradas'; // optional
         $delete->save();
          
          // PERM: RETAKE
@@ -91,7 +91,7 @@ class UniTableUsers extends Seeder
         $retake->name         = 'retake';
         $retake->display_name = 'Reposición en general'; // optional
         // Allow a user to...
-        $retake->description  = 'Repone cosas'; // optional
+        $retake->description  = 'Repone entradas'; // optional
         $retake->save();
         
         //ROLE:EDITOR HAS PERM:CONSULT,DELETE,EDIT,CREATE
